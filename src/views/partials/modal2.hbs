@@ -1,0 +1,33 @@
+<section class="modal-card">
+  <div class="modal__container">
+    <div class="conteiner_contactame">
+      <div class="Comentario">
+        <h1>Añadir lugar</h1>
+        <div class="comment-container">
+
+        </div>
+        <form class="" action="/place" method="post" enctype="multipart/form-data">
+          <label for="title">Nombre</label>
+          <input type="text" name="title" id="title">
+          <p>
+            <label for="description" class="description-label">Descripción
+              <span class="obligatorio">*</span>
+            </label>
+            <textarea name="description" class="description" id="description" required="obligatorio"
+              placeholder="Descripción del lugar"></textarea>
+          </p>
+          <input type="hidden" name="type" value="{{type}}">
+
+          <label for="file-upload" class="custom-file-upload">
+            <p>Imagen</p>
+            <img src="/assets/upload-img.svg" alt="">
+          </label>
+          <input type="file" name="img" id="file-upload" />
+
+          <button class="modal__close" type="submit" name="enviar_formulario" id="enviar" data-type="{{type}}">
+            <p>Enviar</p>
+          </button>
+        </form>
+      </div>
+    </div>
+</section>

@@ -1,0 +1,50 @@
+<section class="modal">
+  <div class="modal__container">
+    <div class="conteiner_contactame">
+      <div class="Comentario">
+        <h1>Comentarios</h1>
+        <div class="comment-container">
+
+        </div>
+        <form class="comment-form">
+
+          <p>
+            <label for="mensaje" class="colocar_mensaje">Mensaje
+              <span class="obligatorio">*</span>
+            </label>
+            <textarea
+              name="comment"
+              class="texto_mensaje"
+              id="mensaje"
+              required="obligatorio"
+              placeholder="Deja aquí tu comentario..."
+              data-name="{{name}}"
+            ></textarea>
+          </p>
+          {{#if name}}
+            <button
+              class="modal__close"
+              type="submit"
+              name="enviar_formulario"
+              id="enviar"
+            >
+              <p>Enviar</p>
+            </button>
+          {{else}}
+            <button
+              class="disabled"
+              name="enviar_formulario"
+              id="enviar"
+              disabled
+            >
+              <p>Enviar</p>
+            </button>
+            <p class="disabled-text"><a href="/login">Ingresa</a>
+              para comentar</p>
+
+          {{/if}}
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

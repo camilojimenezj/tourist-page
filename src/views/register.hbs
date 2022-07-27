@@ -1,0 +1,35 @@
+{{> header}}
+<main>
+  <div class="conteiner_contactame">
+    <div class="Registrate">
+      <h1>Registrate</h1>
+      <form action="/register" method="post">
+        <p>
+          <label for="nombre" class="colocar_nombre">Nombre
+            <span class="obligatorio">*</span>
+          </label>
+          <input type="text" name="name" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+        </p>
+        <p>
+          <label for="email" class="colocar_email">Email
+            <span class="obligatorio">*</span>
+          </label>
+          <input type="email" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+        </p>
+        <p>
+          <label for="password" class="colocar_telefono">Contraseña
+          </label>
+          <input type="password" name="password" id="password" placeholder="Escribe tu teléfono">
+        </p>
+
+        <button type="submit" name="enviar_formulario" id="enviar">
+          <p>REGISTRATE</p>
+        </button>
+        <p class="aviso">
+          <span class="obligatorio"> * </span>Los campos son obligatorios.
+        </p>
+      </form>
+    </div>
+  </div>
+</main>
+{{> footer}}

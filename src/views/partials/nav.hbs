@@ -1,0 +1,16 @@
+<nav>
+  <div class="logo">
+    <img src="/assets/e3b821a0444d8fd2959ff68f89944cb6.jpg" alt="" />
+  </div>
+  <ul>
+    <li><a href="/">Inicio</a></li>
+    <li><a href="/about">Acerca de</a></li>
+    <li><a href="/contact">Contactame</a></li>
+    {{#if name}}
+      <li><a href="/logout">Logout</a></li>
+    {{else}}
+      <li><a href="/login">Login</a></li>
+    {{/if}}
+    <li><a class="registro" href="/register">Registrate</a></li>
+  </ul>
+</nav>

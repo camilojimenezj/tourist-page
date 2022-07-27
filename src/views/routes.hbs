@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/estilos_urb_eco.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    {{> nav}}
+  </header>
+  <div class="container">
+    {{#each list}}
+    <div class="card">
+      <div class="face front">
+        <img src="{{this.img}}" alt="{{this.title}}">
+        <h3>{{this.title}}</h3>
+      </div>
+      <div class="face back">
+        <h3>{{this.title}}</h3>
+        {{#each this.description}}
+        <p>{{this}}</p><br/>
+        {{/each}}
+        <div class="link">
+          <a class="hero__cta" href="#" data-place="{{this.title}}">COMENTARIOS.</a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    {{#if name}}
+    <div class="add-card open-card">
+      <img src="/assets/add-img.svg" alt="add-img">
+      <h3>Añadir Lugar</h3>
+    </div>
+    {{/if}}
+  </div>
+  {{> modal}}
+  {{> modal2}}
+  <footer>
+    <div class="footer-boton">
+      <p>copyright &copy;2022. todos los derechos reservados <span>Sebastian Perez</span></p>
+    </div>
+    <div class="footer-contenedor">
+      <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://api.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+
+  <script src="https://kit.fontawesome.com/300bd3eb4a.js" crossorigin="anonymous"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/place.js"></script>
+  <script src="/js/main.js" type="module"></script>
+</body>
+
+</html>
